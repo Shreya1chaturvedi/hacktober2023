@@ -1,0 +1,20 @@
+public class ArrayRotation {
+    public static void main(String[] args) {
+        int[] originalArray = {1, 2, 3, 4, 5};
+        int rotateBy = 2; // Number of positions to rotate by
+
+        // Create a temporary array to store rotated elements
+        int[] rotatedArray = new int[originalArray.length];
+
+        // Perform the rotation
+        for (int i = 0; i < originalArray.length; i++) {
+            int newPosition = (i + rotateBy) % originalArray.length;
+            rotatedArray[newPosition] = originalArray[i];
+        }
+
+        // Print the rotated array
+        for (int i = 0; i < rotatedArray.length; i++) {
+            System.out.print(rotatedArray[i] + " ");
+        }
+    }
+}
